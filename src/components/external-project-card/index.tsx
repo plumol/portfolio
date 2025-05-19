@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import LazyImage from '../lazy-image';
 import { ga, skeleton } from '../../utils';
 import { SanitizedExternalProject } from '../../interfaces/sanitized-config';
@@ -66,8 +66,22 @@ const ExternalProjectCard = ({
     return array;
   };
 
+  const [searchTerm, setSearchTerm] = useState('');
+  const handleSearch = (event: any) => {
+    setSearchTerm(event.target.value);
+  }
   const renderExternalProjects = () => {
-    return externalProjects.map((item, index) => (
+    return externalProjects.filter((project) => {
+      const tags = project.category.filter(i => i.toLowerCase().includes(searchTerm.toLowerCase()));
+      const filtered = tags.length > 0 ? tags : null;
+      if (searchTerm === "") {
+        return project;
+      }
+      else if (filtered) {
+        // console.log(filtered); // currently fires twice on search
+        return project;
+      }
+    }).map((item, index) => (
       <a
         className="card shadow-lg compact bg-base-100 cursor-pointer"
         key={index}
@@ -89,6 +103,13 @@ const ExternalProjectCard = ({
         }}
       >
         <div className="p-8 h-full w-full">
+          <div className='flex flex-wrap gap-x-2 gap-y-4 items-center mt-2'>
+            {item.category.map((cat) => (
+              <p className='font-normal grow-0 text-xs text-slate-500 border-1 border border-slate-400 px-3 py-1 mb-4 rounded-full inline-block'>
+                {cat} 
+              </p>
+            ))}
+          </div>
           <div className="flex items-center flex-col">
             <div className="w-full">
               <div className="px-4">
@@ -114,6 +135,13 @@ const ExternalProjectCard = ({
                   <p className="mt-2 text-base-content text-opacity-60 text-sm text-justify">
                     {item.description}
                   </p>
+                  <div className='flex flex-wrap gap-x-2 gap-y-2 items-center justify-center mt-2'>
+                    {item.skills.map((skill) => (
+                      <p className='font-normal grow-0 text-xs text-slate-500 border-1 border border-slate-400 px-3 py-1 rounded-full inline-block'>
+                        {skill} 
+                      </p>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -140,6 +168,14 @@ const ExternalProjectCard = ({
                       </span>
                     )}
                   </h5>
+                  <div className='flex gap-4'>
+                    <input type='text' className='' onChange={handleSearch}>
+                    
+                    </input>
+                    <button>
+                      Filter
+                    </button>
+                  </div>
                 </div>
                 <div className="col-span-2">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

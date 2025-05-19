@@ -21,9 +21,11 @@ export interface SanitizedGitHubProjects {
 
 export interface SanitizedExternalProject {
   title: string;
+  category: Array<string>;
   description?: string;
   imageUrl?: string;
   link: string;
+  skills: Array<string>;
 }
 
 export interface SanitizedExternalProjects {
@@ -75,6 +77,7 @@ export interface SanitizedExperience {
   from: string;
   to: string;
   companyLink?: string;
+  description: Array<string>;
 }
 
 export interface SanitizedCertification {
@@ -89,6 +92,7 @@ export interface SanitizedEducation {
   degree?: string;
   from: string;
   to: string;
+  courses: string;
 }
 
 export interface SanitizedPublication {
