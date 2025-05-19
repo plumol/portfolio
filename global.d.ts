@@ -77,9 +77,11 @@ interface ExternalProjects {
    */
   projects?: {
     title: string;
+    category: Array<string>;
     description?: string;
     imageUrl?: string;
     link: string;
+    skills: Array<string>;
   }[];
 }
 
@@ -221,6 +223,7 @@ interface Experience {
   from: string;
   to: string;
   companyLink?: string;
+  description: Array<string>;
 }
 
 interface Certification {
@@ -235,6 +238,7 @@ interface Education {
   degree?: string;
   from: string;
   to: string;
+  courses: string;
 }
 
 interface Publication {
