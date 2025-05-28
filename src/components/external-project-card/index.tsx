@@ -3,6 +3,14 @@ import LazyImage from '../lazy-image';
 import { ga, skeleton } from '../../utils';
 import { SanitizedExternalProject } from '../../interfaces/sanitized-config';
 
+const categoryColorMap: Record<string, string> = {
+  "Computer Vision": "bg-blue-200 text-blue-800",
+  "Deep Learning": "bg-purple-200 text-purple-800",
+  "Database Systems": "bg-green-200 text-green-800",
+  "Data Science": "bg-yellow-200 text-yellow-800",
+  "LLMs": "bg-red-200 text-white-800"
+}
+
 const ExternalProjectCard = ({
   externalProjects,
   header,
@@ -105,7 +113,7 @@ const ExternalProjectCard = ({
         <div className="p-8 h-full w-full">
           <div className='flex flex-wrap gap-x-2 gap-y-4 items-center mt-2'>
             {item.category.map((cat) => (
-              <p className='font-normal grow-0 text-xs text-slate-500 border-1 border border-slate-400 px-3 py-1 mb-4 rounded-full inline-block'>
+              <p className={`font-normal grow-0 text-xs text-slate-500 border-1 border border-slate-400 px-3 py-1 mb-4 rounded-full inline-block ${categoryColorMap[cat]}`}>
                 {cat} 
               </p>
             ))}

@@ -38,7 +38,7 @@ const CONFIG = {
           description:
             'A deep learning model to classifly American Sign Language in real time.',
           imageUrl:
-            'public/asl.jpeg',
+            'src/assets/asl.jpeg',
           // link: 'https://example.com',
           skills: ['Python', 'Tensorflow', 'NumPy', 'OpenCV']
         },
@@ -48,7 +48,7 @@ const CONFIG = {
           description:
             'A database integration enabling natural language OLAP queries using prompt caching and LLMs for query parsing and summarization.',
           imageUrl:
-            'public/olap.png',
+            'src/assets/olap.png',
           // link: 'https://example.com',
           skills: ['Python', 'MongoDB', 'LLMs', 'Next.js']
         },
@@ -111,7 +111,7 @@ const CONFIG = {
   },
   resume: {
     fileUrl:
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      '', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'JavaScript',
@@ -163,7 +163,7 @@ const CONFIG = {
   educations: [
     {
       institution: 'Brown University',
-      degree: 'B.S. Biochemistry, B.S. Computer Science',
+      degree: 'B.S. Biochemistry, B.S. Computer Science with Honors',
       from: '2021',
       to: '2025',
       courses: 'Data Structures and Algorithms, Computer Systems, Computer Vision, Data Science, Data Engineering, Databases Management, Deep Learning, Machine Learning, AI & Security'
