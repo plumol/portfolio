@@ -8,7 +8,9 @@ const categoryColorMap: Record<string, string> = {
   "Deep Learning": "bg-purple-200 text-purple-800",
   "Database Systems": "bg-green-200 text-green-800",
   "Data Science": "bg-yellow-200 text-yellow-800",
-  "LLMs": "bg-red-200 text-white-800"
+  "LLMs": "bg-red-200 text-white-800",
+  "Computational Biology": "bg-pink-200 text-pink-800",
+  "Computational Physics": "bg-white-200 text-gray-800"
 }
 
 const ExternalProjectCard = ({

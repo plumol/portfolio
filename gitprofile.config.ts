@@ -38,7 +38,7 @@ const CONFIG = {
           description:
             'A deep learning model to classifly American Sign Language in real time.',
           imageUrl:
-            'src/assets/asl.jpeg',
+            'https://github.com/plumol/portfolio/blob/main/src/assets/asl.jpeg?raw=true',
           // link: 'https://example.com',
           skills: ['Python', 'Tensorflow', 'NumPy', 'OpenCV']
         },
@@ -48,7 +48,7 @@ const CONFIG = {
           description:
             'A database integration enabling natural language OLAP queries using prompt caching and LLMs for query parsing and summarization.',
           imageUrl:
-            'src/assets/olap.png',
+            'https://github.com/plumol/portfolio/blob/main/src/assets/olap.png?raw=true',
           // link: 'https://example.com',
           skills: ['Python', 'MongoDB', 'LLMs', 'Next.js']
         },
@@ -68,7 +68,7 @@ const CONFIG = {
             'A modular data pipeline for 3D scene reconstruction, extracting configurable bounding boxes that enable customizable indoor environments to rescale, reorient, and replace in-scene objects.',
           imageUrl:
             '',
-          skills: ['COLMAP', 'Mesh rendering']
+          skills: ['COLMAP', 'Mesh rendering', '3D reconstruction']
         },
         {
           title: 'Interpreting Concept Emergence in Audio Diffusion Trajectories',
@@ -78,6 +78,24 @@ const CONFIG = {
           imageUrl:
             '',
           skills: ['Diffusion', 'Interpretability Analysis']
+        },
+        {
+          title: 'forGATable: a Graph-Attention Network for Predicting RNA Velocity',
+          category: ['Deep Learning', 'Computational Biology'],
+          description:
+            'A graph-attention network for predicting RNA velocity trajectories, a measure of the rate of gene expression in single-cell RNA sequencing data.',
+          imageUrl:
+            '',
+          skills: ['Graph-attention networks', 'Interpretability', 'scRNA-seq']
+        },
+        {
+          title: 'Accelerating Hard Disk Simulations using Event Chain Monte Carlo with Factor Fields',
+          category: ['Computational Physics'],
+          description:
+            "An implementation of  Event Chain Monte Carlo algorithm with factor fields to simulate particle and quantum spin systems.",
+          imageUrl:
+            '',
+          skills: ['Visualization', 'Monte Carlo algorithms', 'Physics-based simulations']
         }
       ],
     },
